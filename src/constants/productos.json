@@ -1,0 +1,93 @@
+[
+    {
+      "id": 1,
+      "idCategoria": 1,
+      "name": "Televisor LED",
+      "descripcion": "Televisor LED de alta definición",
+      "price": 399.99,
+      "image": "televisor.jpg",
+      "tags": ["televisor", "LED", "electrónica"]
+    },
+    {
+      "id": 2,
+      "idCategoria": 1,
+      "name": "Smartphone Android",
+      "descripcion": "Smartphone Android con pantalla táctil",
+      "price": 299.99,
+      "image": "smartphone.jpg",
+      "tags": ["smartphone", "Android", "electrónica"]
+    },
+    {
+      "id": 3,
+      "idCategoria": 1,
+      "name": "Tableta",
+      "descripcion": "Tableta con procesador de alta velocidad",
+      "price": 199.99,
+      "image": "tableta.jpg",
+      "tags": ["tableta", "electrónica"]
+    },
+    {
+      "id": 4,
+      "idCategoria": 1,
+      "name": "Auriculares inalámbricos",
+      "descripcion": "Auriculares inalámbricos con cancelación de ruido",
+      "price": 129.99,
+      "image": "auriculares.jpg",
+      "tags": ["auriculares", "inalámbricos", "electrónica"]
+    },
+    {
+      "id": 5,
+      "idCategoria": 1,
+      "name": "Cámara digital",
+      "descripcion": "Cámara digital de alta resolución",
+      "price": 499.99,
+      "image": "camara.jpg",
+      "tags": ["cámara", "digital", "electrónica"]
+    },
+    {
+      "id": 6,
+      "idCategoria": 1,
+      "name": "Altavoz Bluetooth",
+      "descripcion": "Altavoz portátil con conectividad Bluetooth",
+      "price": 79.99,
+      "image": "altavoz.jpg",
+      "tags": ["altavoz", "Bluetooth", "electrónica"]
+    },
+    {
+      "id": 7,
+      "idCategoria": 1,
+      "name": "Monitor de computadora",
+      "descripcion": "Monitor de alta resolución para computadora",
+      "price": 249.99,
+      "image": "monitor.jpg",
+      "tags": ["monitor", "computadora", "electrónica"]
+    },
+    {
+      "id": 8,
+      "idCategoria": 1,
+      "name": "Reproductor de DVD",
+      "descripcion": "Reproductor de DVD con soporte para varios formatos",
+      "price": 69.99,
+      "image": "dvd.jpg",
+      "tags": ["reproductor", "DVD", "electrónica"]
+    },
+    {
+      "id": 9,
+      "idCategoria": 1,
+      "name": "Impresora láser",
+      "descripcion": "Impresora láser de alta velocidad",
+      "price": 199.99,
+      "image": "impresora.jpg",
+      "tags": ["impresora", "láser", "electrónica"]
+    },
+    {
+      "id": 10,
+      "idCategoria": 1,
+      "name": "Teclado gaming",
+      "descripcion": "Teclado gaming retroiluminado con teclas programables",
+      "price": 129.99,
+      "image": "teclado.jpg",
+      "tags": ["teclado", "gaming", "electrónica"]
+    }
+  ]
+  
