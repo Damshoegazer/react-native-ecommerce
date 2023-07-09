@@ -1,16 +1,16 @@
 [
     {
       "id": 1,
-      "idCategoria": 1,
+      "idCategoria": "teles",
       "name": "Televisor LED",
       "descripcion": "Televisor LED de alta definición",
       "price": 399.99,
-      "image": "televisor.jpg",
+      "image": "https://www.lavoz.com.ar/resizer/jRDaSteLMh4RMfiD0KFM0BO-p0w=/980x640/smart/filters:quality(75):format(webp)/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/RNQWV7HMPNA2DACYS6HUBWUW3E.jpg",
       "tags": ["televisor", "LED", "electrónica"]
     },
     {
       "id": 2,
-      "idCategoria": 1,
+      "idCategoria": "teles",
       "name": "Smartphone Android",
       "descripcion": "Smartphone Android con pantalla táctil",
       "price": 299.99,
@@ -19,7 +19,7 @@
     },
     {
       "id": 3,
-      "idCategoria": 1,
+      "idCategoria": "gatgets",
       "name": "Tableta",
       "descripcion": "Tableta con procesador de alta velocidad",
       "price": 199.99,
@@ -28,7 +28,7 @@
     },
     {
       "id": 4,
-      "idCategoria": 1,
+      "idCategoria": "gatgets",
       "name": "Auriculares inalámbricos",
       "descripcion": "Auriculares inalámbricos con cancelación de ruido",
       "price": 129.99,
@@ -37,7 +37,7 @@
     },
     {
       "id": 5,
-      "idCategoria": 1,
+      "idCategoria": "gatgets",
       "name": "Cámara digital",
       "descripcion": "Cámara digital de alta resolución",
       "price": 499.99,
@@ -46,7 +46,7 @@
     },
     {
       "id": 6,
-      "idCategoria": 1,
+      "idCategoria": "smartphones",
       "name": "Altavoz Bluetooth",
       "descripcion": "Altavoz portátil con conectividad Bluetooth",
       "price": 79.99,
@@ -55,7 +55,7 @@
     },
     {
       "id": 7,
-      "idCategoria": 1,
+      "idCategoria": "smartphones",
       "name": "Monitor de computadora",
       "descripcion": "Monitor de alta resolución para computadora",
       "price": 249.99,
@@ -64,7 +64,7 @@
     },
     {
       "id": 8,
-      "idCategoria": 1,
+      "idCategoria": "smartphones",
       "name": "Reproductor de DVD",
       "descripcion": "Reproductor de DVD con soporte para varios formatos",
       "price": 69.99,
@@ -73,7 +73,7 @@
     },
     {
       "id": 9,
-      "idCategoria": 1,
+      "idCategoria": "tablets",
       "name": "Impresora láser",
       "descripcion": "Impresora láser de alta velocidad",
       "price": 199.99,
@@ -82,7 +82,7 @@
     },
     {
       "id": 10,
-      "idCategoria": 1,
+      "idCategoria": "tablets",
       "name": "Teclado gaming",
       "descripcion": "Teclado gaming retroiluminado con teclas programables",
       "price": 129.99,

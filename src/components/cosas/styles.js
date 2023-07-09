@@ -11,7 +11,7 @@ import { StyleSheet } from "react-native";
         height: 800,
         paddingTop: 100,
 
-        /* backgroundColor:"" */
+        backgroundColor:"pink"
     },
     textito: {
         fontSize: 20,
