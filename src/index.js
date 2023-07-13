@@ -1,55 +1,63 @@
-import {View, Text, StyleSheet, StatusBar, TouchableOpacity, FlatList, Image} from 'react-native'
-import { useState } from 'react'
-import styles from './styles'
-import {Cosas} from './components'
-import prods from './constants/productos.json'
+import { useState } from 'react';
+import { SafeAreaView, StyleSheet, View, Text, Button, ActivityIndicator } from 'react-native';
+import {useFonts} from 'expo-font';
+import { Header } from './components';
+import { Categories, Products } from './screens';
+import { COLORS } from './themes';
 
+const categoryDefault = {
+  categoryId: null,
+  color: COLORS.primary,
+};
 export default function App() {
-    
-    const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("");
-    
-    const filtrarPorCategoria = () => {
-        return prods.filter(prod => prod.idCategoria === categoriaSeleccionada);
-      }
-    
+  
+  const [loaded] = useFonts({
+    HelveticaNowDisplayBold: require('../assets/fonts/HelveticaNowDisplay-Bold.ttf'),
+    HelveticaNowDisplayRegular: require('../assets/fonts/HelveticaNowDisplay-Regular.ttf'),
 
+  })
+
+
+  const [isCategorySelected, setIsCategorySelected] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState(categoryDefault);
+
+  const headerTitle = isCategorySelected ? 'Products' : 'Categories';
+
+  const onHandleSelectCategory = ({ categoryId, color }) => {
+    setSelectedCategory({ categoryId, color });
+    setIsCategorySelected(!isCategorySelected);
+  };
+  const onHandleNavigate = () => {
+    setIsCategorySelected(!isCategorySelected);
+    setSelectedCategory(categoryDefault);
+  };
+
+  /* Para las fuentes */
+  if (!loaded) {
     return(
-        
-        <View style={styles.container}>
-            <Text>Categotia seleccionada:{categoriaSeleccionada} </Text>
-            <View style={styles.buttons}>
-                
-                <TouchableOpacity style={styles.button}  onPress={() => setCategoriaSeleccionada("teles")}>
-                    <Text>press1</Text>
-                </TouchableOpacity>
-                
-                <TouchableOpacity style={styles.button}  onPress={() => setCategoriaSeleccionada("smartphones")}>
-                    <Text>press2</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.button}  onPress={() => setCategoriaSeleccionada("gatgets")}>
-                    <Text>press3</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.button}  onPress={() => setCategoriaSeleccionada("tablets")}>
-                    <Text>press4</Text>
-                </TouchableOpacity>
-            </View>
-            <FlatList
-
-        data={filtrarPorCategoria()}
-        keyExtractor={item => item.id.toString()}
-        renderItem={({ item }) => (
-            
-            
-          <View style={styles.flat}>
-            <Text>{item.name}</Text>
-            <Image source={{uri: item.image}} style={styles.img}/>
-            <Text>Descripción: {item.descripcion}</Text>
-            <Text>Precio: {item.price}</Text>
-            <View style={styles.separador}></View>
-          </View>
-          
-        )}
-      />
-        </View>
+      <View >
+        <ActivityIndicator size="large" />
+      </View>
     )
+  }
+
+  return (
+    <SafeAreaView style={styles.container}>
+      <View style={styles.container}>
+        <Header title={headerTitle} style={{ backgroundColor: selectedCategory.color }} />
+        {isCategorySelected ? (
+          <Products onHandleGoBack={onHandleNavigate} categorySelected={selectedCategory} />
+        ) : (
+          <Categories onSelectCategory={onHandleSelectCategory} />
+        )}
+      </View>
+    </SafeAreaView>
+  );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    
+  },
+});
