@@ -22,7 +22,6 @@ export const styles = StyleSheet.create({
   categoryName: {
     fontSize: 20,
     fontFamily:"HelveticaNowDisplayBold",
-    /* fontWeight: 'bold', */
     color: COLORS.white,
     
     padding: 20,

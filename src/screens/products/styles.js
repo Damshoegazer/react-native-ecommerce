@@ -1,12 +1,14 @@
-
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
 import { COLORS } from '../../themes';
+
+const { width } = Dimensions.get('window');
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginHorizontal: 15,
+    marginVertical: 15,
   },
   header: {
     flexDirection: 'row',
@@ -19,12 +21,12 @@ export const styles = StyleSheet.create({
     paddingVertical: 10,
   },
   goBackText: {
-    fontFamily:"HelveticaNowDisplayRegular",
     fontSize: 14,
     color: COLORS.text,
   },
   products: {
     flex: 1,
+    gap: 15,
   },
   notFound: {
     flex: 1,
@@ -37,14 +39,21 @@ export const styles = StyleSheet.create({
     right: 5,
   },
   productsContent: {
-    paddingVertical: 25,
+    paddingVertical: 20,
     gap: 15,
   },
   productContainer: {
     backgroundColor: COLORS.background,
     borderRadius: 10,
-    width: '45%',
-    marginHorizontal: 10,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
+    elevation: 3,
+    width: width / 2 - 20,
   },
   productImage: {
     width: '100%',
@@ -56,11 +65,9 @@ export const styles = StyleSheet.create({
   },
   productName: {
     fontSize: 14,
-    fontFamily:"HelveticaNowDisplayRegular"
   },
   productPrice: {
     fontSize: 15,
-    /* fontWeight: 'bold', */
-    fontFamily:"HelveticaNowDisplayBold"
+    fontWeight: 'bold',
   },
 });
