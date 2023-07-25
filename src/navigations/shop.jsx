@@ -16,7 +16,7 @@ function ShopNavigator() {
           height: 80,
         },
         headerTitleStyle: {
-          /* fontFamily: FONTS.bold, */
+          
           fontSize: 16,
         },
         headerTintColor: COLORS.white,

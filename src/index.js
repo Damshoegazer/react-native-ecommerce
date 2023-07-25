@@ -1,16 +1,17 @@
 import { useFonts } from 'expo-font';
 import { SafeAreaView, StyleSheet, View, ActivityIndicator } from 'react-native';
+import { Provider } from 'react-redux';
 
 import RootNavigator from './navigations';
+import { store } from './store';
 import { COLORS } from './themes';
-
-
 
 export default function App() {
   const [loaded] = useFonts({
     HelveticaNowDisplayBold: require('../assets/fonts/HelveticaNowDisplay-Bold.ttf'),
     HelveticaNowDisplayRegular: require('../assets/fonts/HelveticaNowDisplay-Regular.ttf'),
   });
+  
 
   if (!loaded) {
     return (
@@ -21,9 +22,11 @@ export default function App() {
   }
 
   return (
-    <SafeAreaView style={styles.container}>
-      <RootNavigator />
-    </SafeAreaView>
+    <Provider store={store}>
+      <SafeAreaView style={styles.container}>
+        <RootNavigator />
+      </SafeAreaView>
+    </Provider>
   );
 }
 
