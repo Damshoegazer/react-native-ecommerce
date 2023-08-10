@@ -15,7 +15,7 @@ const CartNavigator = () => {
           height: 80,
         },
         headerTitleStyle: {
-          
+          fontFamily: "HelveticaNowDisplayRegular",
           fontSize: 16,
         },
         headerTintColor: COLORS.white,

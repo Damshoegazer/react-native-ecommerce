@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
     gap: 10,
   },
   name: {
-    fontFamily: "HelveticaNowDisplayRegular",
+    fontFamily: "HelveticaNowDisplayBold",
     fontSize: 18,
   },
   description: {
@@ -28,11 +28,11 @@ export const styles = StyleSheet.create({
     fontSize: 14,
   },
   tagTitle: {
-    fontFamily: "HelveticaNowDisplayRegular",
+    fontFamily: "HelveticaNowDisplayBold",
     fontSize: 16,
   },
   price: {
-    fontFamily: "HelveticaNowDisplayRegular",
+    fontFamily: "HelveticaNowDisplayBold",
     fontSize: 20,
   },
   containerTags: {
@@ -46,5 +46,26 @@ export const styles = StyleSheet.create({
   },
   tag: {
     color: COLORS.white,
+  },
+  containerButton: {
+    marginVertical: 10,
+  },
+  addToCartButton: {
+    width: '100%',
+    backgroundColor: COLORS.primary,
+    padding: 15,
+    borderRadius: 5,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  addToCartText: {
+    fontFamily: "HelveticaNowDisplayRegular",
+    fontSize: 16,
+    color: COLORS.white,
+  },
+  containerLoader: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
